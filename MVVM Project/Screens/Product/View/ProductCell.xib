@@ -20,8 +20,11 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8DV-2T-gkZ">
                         <rect key="frame" x="8" y="8" width="304" height="184"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8QQ-9N-ipd">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8QQ-9N-ipd">
                                 <rect key="frame" x="8.0000000000000071" y="8" width="121.66666666666669" height="168"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="168" id="tKm-Hv-4px"/>
+                                </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="43t-Mm-bqs">
                                 <rect key="frame" x="145.66666666666663" y="8" width="150.33333333333337" height="168"/>
@@ -36,17 +39,17 @@
                                                 <nil key="highlightedColor"/>
                                                 <size key="shadowOffset" width="1" height="-1"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="fVn-t8-nsr">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="fVn-t8-nsr">
                                                 <rect key="frame" x="0.0" y="20.333333333333332" width="150.33333333333334" height="35.333333333333343"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWF-Sy-lz7">
-                                                        <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="35.333333333333336"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="74" height="35.333333333333336"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" systemColor="secondaryLabelColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G4G-R1-e1z">
-                                                        <rect key="frame" x="43.333333333333343" y="0.0" width="107" height="35.333333333333336"/>
+                                                        <rect key="frame" x="76" y="0.0" width="74.333333333333314" height="35.333333333333336"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="star.fill" catalog="system" title="4.1">
                                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="18" scale="small"/>
@@ -61,7 +64,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gJq-Cp-f6u">
                                         <rect key="frame" x="0.0" y="63.666666666666671" width="150.33333333333334" height="62"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOg-mF-X0v">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOg-mF-X0v">
                                                 <rect key="frame" x="0.0" y="0.0" width="150.33333333333334" height="62"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                                 <color key="textColor" systemColor="secondaryLabelColor"/>
@@ -90,8 +93,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="8QQ-9N-ipd" secondAttribute="bottom" constant="8" id="9tq-P7-Ea5"/>
-                            <constraint firstAttribute="height" constant="184" id="JkV-CG-OJO"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="8QQ-9N-ipd" secondAttribute="bottom" constant="8" id="9tq-P7-Ea5"/>
                             <constraint firstAttribute="bottom" secondItem="43t-Mm-bqs" secondAttribute="bottom" constant="8" id="PKs-hf-73g"/>
                             <constraint firstItem="8QQ-9N-ipd" firstAttribute="width" secondItem="8DV-2T-gkZ" secondAttribute="width" multiplier="0.4" id="bWk-O3-3FG"/>
                             <constraint firstItem="43t-Mm-bqs" firstAttribute="top" secondItem="8DV-2T-gkZ" secondAttribute="top" constant="8" id="dwK-Ol-O5p"/>
@@ -120,7 +122,7 @@
                 <outlet property="productTitleLabel" destination="szF-Ui-EbR" id="xXU-AI-iai"/>
                 <outlet property="rateButton" destination="G4G-R1-e1z" id="E7K-Ia-xVs"/>
             </connections>
-            <point key="canvasLocation" x="92" y="20"/>
+            <point key="canvasLocation" x="91.603053435114504" y="19.718309859154932"/>
         </tableViewCell>
     </objects>
     <resources>

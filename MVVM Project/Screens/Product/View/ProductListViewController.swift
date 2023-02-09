@@ -23,6 +23,7 @@ class ProductListViewController: UIViewController {
 extension ProductListViewController{
     func configuration(){
         productTableView.register(UINib(nibName: "ProductCell", bundle: nil), forCellReuseIdentifier: "ProductCell")
+        productTableView.rowHeight=UITableView.automaticDimension
         initViewModel()
         observeEvent()
     }
